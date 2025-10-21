@@ -21,7 +21,6 @@ const int MOVES_Y[MOVE_COUNT] = {1, 2, 2, 1, -1, -2, -2, -1}; // Possible moves 
 //MOVES_X[1]
 //MOVES_Y[1]
 
-
 bool make_a_move(size_t move_id, int x,int y, bool board[SIZE][SIZE]){ //parametre for funktionen move_id angiver hvilket af springerens træk der skal udføres
 
     int new_x = x + MOVES_X[move_id]; // Beregner ny position af springer ud fra hvilket træk fra array der er udført
@@ -34,7 +33,6 @@ bool make_a_move(size_t move_id, int x,int y, bool board[SIZE][SIZE]){ //paramet
     }
 
 }
-
 
 int tour_greedy(size_t start_x, size_t start_y, bool board[SIZE][SIZE]) { //startposition på boardet
     for(int i = 0; i < SIZE; i++)
@@ -75,8 +73,6 @@ void greedy_tour_from_each_square() { //Beregner for hver startposition hvor man
     }
 }
 
-
-
 int main(){ 
     
     char userInput = '\0';
@@ -96,7 +92,7 @@ int main(){
         printf("\nStarting greedy tour from (0,0):\n");
         int visited = tour_greedy(0, 0, board); //kører greedy funktionen
         printf("Knight visited %d squares.\n", visited);
-        greedy_tour_from_each_square();
+        greedy_tour_from_each_square(); //printer board med antal mulige felter
     }
 
 
