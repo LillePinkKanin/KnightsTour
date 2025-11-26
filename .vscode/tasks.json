@@ -4,7 +4,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "clang main.c",
+            	"command": "clang main.c knightstour_functions.c -o knightstour.exe",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
